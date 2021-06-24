@@ -29,8 +29,8 @@
 # Authors: keir@google.com (Keir Mierle)
 #          alexs.mac@gmail.com (Alex Stewart)
 
-cmake_minimum_required(VERSION 3.5)
-cmake_policy(VERSION 3.5)
+cmake_minimum_required(VERSION 3.20)
+cmake_policy(VERSION 3.20)
 if (POLICY CMP0074)
   # FindTBB.cmake uses TBB_ROOT in a way that is historical, but also compliant
   # with CMP0074 so suppress the legacy compatibility warning and allow its use.
