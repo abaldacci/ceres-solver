@@ -36,6 +36,9 @@ if (POLICY CMP0074)
   # with CMP0074 so suppress the legacy compatibility warning and allow its use.
   cmake_policy(SET CMP0074 NEW)
 endif()
+if(POLICY CMP0025)
+  cmake_policy(SET CMP0025 NEW)
+endif()
 
 # Set the C++ version (must be >= C++14) when compiling Ceres.
 #
