@@ -611,7 +611,7 @@ endif (UNIX)
 # threshold to the linker and clang complains about it and dies.
 if (CMAKE_CXX_COMPILER_ID MATCHES "Clang") # Matches Clang & AppleClang.
   set(CMAKE_CXX_FLAGS
-    "${CMAKE_CXX_FLAGS} -Qunused-arguments -mllvm -inline-threshold=600")
+    "${CMAKE_CXX_FLAGS} -Qunused-arguments")
 
   # Older versions of Clang (<= 2.9) do not support the 'return-type-c-linkage'
   # option, so check for its presence before adding it to the default flags set.
