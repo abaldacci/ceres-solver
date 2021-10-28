@@ -50,6 +50,12 @@ target_link_libraries(curve_fitting Ceres::ceres)
 add_executable(rosenbrock rosenbrock.cc)
 target_link_libraries(rosenbrock Ceres::ceres)
 
+add_executable(rosenbrock_analytic_diff rosenbrock_analytic_diff.cc)
+target_link_libraries(rosenbrock_analytic_diff Ceres::ceres)
+
+add_executable(rosenbrock_numeric_diff rosenbrock_numeric_diff.cc)
+target_link_libraries(rosenbrock_numeric_diff Ceres::ceres)
+
 add_executable(curve_fitting_c curve_fitting.c)
 target_link_libraries(curve_fitting_c Ceres::ceres)
 # Force CMake to link curve_fitting_c using the C linker.
@@ -69,6 +75,12 @@ target_link_libraries(robust_curve_fitting Ceres::ceres)
 
 add_executable(simple_bundle_adjuster simple_bundle_adjuster.cc)
 target_link_libraries(simple_bundle_adjuster Ceres::ceres)
+
+add_executable(bicubic_interpolation bicubic_interpolation.cc)
+target_link_libraries(bicubic_interpolation Ceres::ceres)
+
+add_executable(bicubic_interpolation_analytic bicubic_interpolation_analytic.cc)
+target_link_libraries(bicubic_interpolation_analytic Ceres::ceres)
 
 if (GFLAGS)
   add_executable(powell powell.cc)
